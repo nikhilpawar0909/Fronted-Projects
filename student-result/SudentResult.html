@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/sit logo.jpeg">
+    <title>SITCOE</title>
+    <link rel="stylesheet" href="StudentResult.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <h2>STUDENT RESULT DECLARATION</h2>
+        <label for="prn">PRN No:</label>
+        <input type="text" name="PRN" id="prn" placeholder="Enter PRN No" maxlength="10">
+        <br>
+        <label for="branch" class="label">Branch:</label>
+        <select name="branch" id="branch">
+            <option value="select" selected>Select branch</option>
+            <option value="cse">CSE</option>
+            <option value="mech">MECH</option>
+            <option value="aids">AIDS</option>
+            <option value="electrical">ELECTRICAL</option>
+        </select>
+        <br>
+        <label for="sem" class="label">Semester:</label>
+        <select name="sem" id="sem">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <br>
+        <button onclick="fetchResult()">View</button>
+    </div>
+
+    <div id="resultContainer" class="result" style="display: none;">
+        <h3>Result Details</h3>
+        <p><strong>Name:</strong> <span id="studentName"></span></p>
+        <p><strong>PRN:</strong> <span id="studentPRN"></span></p>
+        <p><strong>Branch:</strong> <span id="studentBranch"></span></p>
+        <p><strong>Semester:</strong> <span id="studentSemester"></span></p>
+
+        <table class="subject-table">
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody id="subjectTable"></tbody>
+        </table>
+
+        <p><strong>SGP:</strong> <span id="studentSGP"></span></p>
+        <p><strong>CGP:</strong> <span id="studentCGP"></span></p>
+    </div>
+
+    <script src="StudentResult.js"></script>
+</body>
+
+</html>
